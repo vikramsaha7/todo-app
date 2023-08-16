@@ -19,7 +19,7 @@ public class LoginController {
 		this.auth = new AuthenticateService() ;
 	}
 
-	@RequestMapping(value="/login",method=RequestMethod.GET)
+	//@RequestMapping(value="/login",method=RequestMethod.GET)
 	public String loginPage() {
 		//model.put("name", name);
 		//System.out.println("The name is: "+name);
@@ -27,7 +27,7 @@ public class LoginController {
 		return "login";
 	}
 	
-	@RequestMapping(value="/login",method=RequestMethod.POST)
+	//@RequestMapping(value="/login",method=RequestMethod.POST)
 	public String getWelcomePage(@RequestParam String name,@RequestParam String password,ModelMap model) {
 		if(auth.authenticate(name, password)) {
 			model.put("name", name);
